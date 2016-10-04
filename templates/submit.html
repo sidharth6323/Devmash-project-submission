@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <!--hurray at top-->
@@ -52,3 +53,58 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>
+        Devmash Project Submission
+    </title>
+    <meta content="Project Sumbission Console for Devmash" name="description">
+    <meta content="DevmashWEB-Mentor" name="author">
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" name="viewport" />
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="{% static 'css/normalize.css' %}" rel="stylesheet">
+    <link href="{% static 'css/skeleton.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="images/favicon.png" rel="icon" type="image/png">
+</head>
+
+<body>
+    <!-- Content
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="container">
+    <h2>Devmash WEB Project Submission Console</h2>
+    <h4>Assignment: {{project.p_name}} </h4>
+    <p>
+    {{project.p_description}}
+    </p>
+    deadline :    {{project.deadline}}
+    <h4>Time left for Submission: <span></span></h4>
+
+    <form action="." method="post">
+    {% csrf_token %}
+      <label for="username">Github UserName</label>
+      <input type="text" name="g_uname" value="" id="username" placeholder="utkarshbhimte">
+      <label for="RepoLink">Github Repository Link</label>
+      <input type="text" name="repo_link" value="" id="RepoLink" placeholder="https://github.com/Utkarshbhimte/*****************">
+      <label for="GLink">Github Hosted Webpage URL</label>
+      <input type="text" name="hosted_url" value="" id="GLink" placeholder="https://utkarshbhimte.github.io/****************">
+      <input id="submit" type="submit" name="submit" value="Submit">
+    </form>
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
+>>>>>>> 18788c4faa92f34f888f3f4a19ff099e5e961f3f
