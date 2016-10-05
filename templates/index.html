@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load staticfiles %}
 
 <head>
     <!-- Basic Page Needs
@@ -16,9 +15,9 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" name="viewport" />
     <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="{% static 'css/normalize.css' %}" rel="stylesheet">
-    <link href="{% static 'css/skeleton.css' %}" rel="stylesheet">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/skeleton.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="images/favicon.png" rel="icon" type="image/png">
@@ -28,26 +27,21 @@
     <!-- Content
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <div class="container">
-        <h2>Devmash WEB Project Submission Console</h2>
-        <h4>Assignment: {{project.p_name}} </h4>
-        <p>
-            {{project.p_description}}
-        </p>
-        deadline : {{project.deadline}}
-        <h4>Time left for Submission: <span>90:00:08</span></h4>
-
-        <form action="." method="post">
-            {% csrf_token %}
-            <label class="six columns" for="username">Github UserName</label>
-            <input class="six columns" type="text" name="g_uname" value="" id="username" placeholder="utkarshbhimte">
-            <label class="six columns" for="RepoLink">Github Repository Link</label>
-            <input class="six columns" type="text" name="repo_link" value="" id="RepoLink" placeholder="https://github.com/Utkarshbhimte/*****************">
-            <label class="six columns" for="GLink">Github Hosted Webpage URL</label>
-            <input class="six columns" type="text" name="hosted_url" value="" id="GLink" placeholder="https://utkarshbhimte.github.io/****************">
-            <input class="six columns" id="submit" type="submit" name="submit" value="Submit">
-        </form>
-        <!-- End Document
+  <div class="container">
+    <img id="logo"src="images/favicon.png" alt="" />
+    <div id="nav"class="row">
+      <div class="four columns">
+        Web Track
+      </div>
+      <div class="four columns">
+        Python Track
+      </div>
+      <div class="four columns">
+        Android Track
+      </div>
+    </div>
+  </div>
+    <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 
